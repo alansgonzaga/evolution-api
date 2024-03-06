@@ -17,7 +17,7 @@ class Instancia
      * Permite especificar um token único qualquer para linkar com a instância
      * @var string
      */
-    public string $apiKey; // Como pré-preencher um randômico?
+    public string $apiKey = ''; // Como pré-preencher um randômico?
 
     // public bool $listenWebhooks = config('evolution.webhook_enabled', false);
 
@@ -70,7 +70,7 @@ class Instancia
         //     );
         // }
 
-        $request = new Request('POST', 'https://sub.domain.com (Domain of your API)/instance/create', $headers, json_encode($body));
+        $request = new Request('POST', 'https://localhost:8080/instance/create', $headers, json_encode($body));
         $res = $client->sendAsync($request)->wait();
 
         dd($res->getBody());
