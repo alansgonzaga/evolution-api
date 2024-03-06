@@ -24,6 +24,8 @@ class Instancia
     public function criarInstancia()
     {
         $client = new Client();
+        
+        $url = config('evolution.url') . '/instance/create';
 
         $headers = [
             'Content-Type' => 'application/json',
@@ -70,7 +72,7 @@ class Instancia
         //     );
         // }
 
-        $request = new Request('POST', 'https://localhost:8080/instance/create', $headers, json_encode($body));
+        $request = new Request('POST', $url, $headers, json_encode($body));
         $res = $client->sendAsync($request)->wait();
 
         dd($res->getBody());
