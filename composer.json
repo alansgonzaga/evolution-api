@@ -1,0 +1,31 @@
+{
+    "name": "alansgonzaga/evolution-api",
+    "description": "PHP SDK da API de WhatsApp da EvolutionAPI",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alansgonzaga\\EvolutionApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alan Gonzaga",
+            "email": "alan.s.gonzaga@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^10.47",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/console": "^10.47",
+        "illuminate/routing": "^10.47"
+    },
+    "extras": {
+        "laravel": {
+            "providers": [
+                "Alansgonzaga\\EvolutionApi\\EvolutionApiServiceProvider"
+            ]
+        }
+    }
+}
