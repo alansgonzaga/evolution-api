@@ -17,7 +17,7 @@ class Instancia
      * Permite especificar um token único qualquer para linkar com a instância
      * @var string
      */
-    public string $apiKey = ''; // Como pré-preencher um randômico?
+    public string $token = ''; // Como pré-preencher um randômico?
 
     // public bool $listenWebhooks = config('evolution.webhook_enabled', false);
 
@@ -34,7 +34,7 @@ class Instancia
 
         $body = [
             "instanceName" => $this->instanceName,
-            "token" => $this->apiKey,
+            "token" => $this->token,
             "qrcode" => true
         ];
 
