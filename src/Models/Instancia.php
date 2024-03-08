@@ -75,6 +75,6 @@ class Instancia
         $request = new Request('POST', $url, $headers, json_encode($body));
         $res = $client->sendAsync($request)->wait();
 
-        dd($res->getBody());
+        return $res->getBody();
     }
 }
